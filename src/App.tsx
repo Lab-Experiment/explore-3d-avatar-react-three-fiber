@@ -8,7 +8,7 @@ import { Canvas, useLoader } from "@react-three/fiber";
 import { Suspense, useEffect, useRef } from "react";
 import * as THREE from "three";
 import { FBXLoader } from "three-stdlib";
-import Avatar from "./Components/Avatar";
+import MaleAvatar from "./Components/Avatar";
 import FemaleAvatar from "./Components/FemaleAvatar";
 
 const Loader = () => {
@@ -18,8 +18,8 @@ const Loader = () => {
 
 function AvatarSceneAnimated() {
   const avatarRef = useRef<THREE.Group>(null);
-  const fbx = useLoader(FBXLoader, "/updated1.fbx");
-  const animation = useLoader(FBXLoader, "/untitled1sit.fbx");
+  const fbx = useLoader(FBXLoader, "/deri.fbx");
+  const animation = useLoader(FBXLoader, "/deri-sit-animation.fbx");
   const mixer = useRef<THREE.AnimationMixer | null>(null);
 
   useEffect(() => {
@@ -80,9 +80,9 @@ const App = () => {
           <AvatarSceneAnimated />
         </mesh>
         <mesh position={[0, -2, 0]} scale={2}>
-          <Avatar />
+          <MaleAvatar />
         </mesh>
-        <mesh position={[2.2, -2, 0]} scale={1.01}>
+        <mesh position={[2.3, -2, 0]} scale={1.01}>
           <FemaleAvatar />
         </mesh>
         <ambientLight intensity={0.8} />
