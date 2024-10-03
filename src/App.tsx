@@ -88,14 +88,7 @@ const App = () => {
         <ambientLight intensity={0.8} />
         <pointLight position={[10, 10, 10]} intensity={1} />
         <directionalLight position={[0, 0, 5]} intensity={0.5} />
-        <OrbitControls
-          enableZoom={true}
-          enablePan={true}
-          enableRotate={true}
-          zoomSpeed={0.6}
-          panSpeed={0.5}
-          rotateSpeed={0.4}
-        />
+        <OrbitControls />
         <Environment
           preset="sunset"
           background
